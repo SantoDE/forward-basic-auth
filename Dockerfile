@@ -7,6 +7,6 @@ COPY *.go ./
 
 RUN go build -o /basic-auth-app
 
-EXPOSE 8080
+EXPOSE 8010
 
 CMD [ "/basic-auth-app" ]
