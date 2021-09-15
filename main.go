@@ -11,7 +11,7 @@ import (
 func main() {
 
 	fmt.Printf("Starting server at port 8080\n")
-	if err := http.ListenAndServe(":8010", http.HandlerFunc(basicAuth)); err != nil {
+	if err := http.ListenAndServe(":8080", http.HandlerFunc(basicAuth)); err != nil {
 		log.Fatal(err)
 	}
 }
