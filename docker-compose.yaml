@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  traefik:
+    image: traefik:2.5
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - ./conf:/etc/traefik/
+    command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--entryPoints.web.address=:80"
+      - "--providers.file.directory=/etc/traefik"
+      - "--providers.file.watch=true"

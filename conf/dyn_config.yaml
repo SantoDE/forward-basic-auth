@@ -1,0 +1,14 @@
+http:
+  # Add the router
+  routers:
+    router0:
+      entryPoints:
+      - web
+      service: service0
+      rule: Path(`/test`)
+
+  services:
+      service0:
+         loadBalancer:
+            servers:
+            -  url: http://host.docker.internal:8010
